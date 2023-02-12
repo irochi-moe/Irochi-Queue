@@ -1,0 +1,41 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VSCode
+.vscode/
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+out/
+
+# Maven
+target/
+dependency-reduced-pom.xml
+
+# Gradle
+.gradle/
+build/
+
+# Vim
+.*.sw[a-p]
+
+# Mac filesystem
+.DS_Store/
+.DS_Store
+
+# Linux temp files
+*~
+
+# various other potential build files
+build/
+bin/
+dist/
+manifest.mf
+
+# Other files
+run/

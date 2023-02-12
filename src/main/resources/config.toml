@@ -1,0 +1,66 @@
+# Queue plugin config
+
+[autoqueue]
+# Delay in seconds after which a player will get autoqueued.
+delay = 90
+# The server that will be chosen as the default autoqueue target.
+default-target = "game"
+autoqueue-server = "lobby"
+
+[database]
+# Available types: flatfile, sql
+type = "flatfile"
+# Sql settings
+host = "127.0.0.1"
+port = "3306"
+username = "root"
+password = ""
+database_name = "queue"
+flags = ""
+
+[[priority]]
+name = "staff"
+weight = 6
+message = "<aqua>Staff <green>대기열 우선권이 활성화되었습니다."
+
+[[priority]]
+name = "guide"
+weight = 5
+message = "<blue>Guide <green>대기열 우선권이 활성화되었습니다."
+
+[[priority]]
+name = "pro"
+weight = 4
+message = "<red>Pro <green>대기열 우선권이 활성화되었습니다."
+
+[[priority]]
+name = "basic"
+weight = 3
+message = "<gold>Basic <green>대기열 우선권이 활성화되었습니다."
+
+[[priority]]
+name = "lite"
+weight = 2
+message = "<gray>Lite <green>대기열 우선권이 활성화되었습니다."
+
+[[priority]]
+name = "priority"
+weight = 1
+message = "<green>대기열 우선권이 활성화되었습니다."
+
+# All queues have 'subqueues', a player's priority weight will decide which they enter.
+# The min-weight is the weight that a player's priority must have to enter this subqueue.
+[[subqueue]]
+name = "regular"
+min-weight = 0
+sends = 1
+
+[[subqueue]]
+name = "priority"
+min-weight = 1
+sends = 1
+
+[[subqueue]]
+name = "premium"
+min-weight = 5
+sends = 3
